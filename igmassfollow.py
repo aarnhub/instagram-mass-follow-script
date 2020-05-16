@@ -24,7 +24,7 @@ def main():
  yourpassword = "*******"  #your IG password
 
 
- #for proxy i recommend 4G mobile proxy: http://www.virtnumber.com/mobile-proxy-4g.php
+ #for proxy i recommend 4G mobile proxy: https://www.virtnumber.com/mobile-proxy-4g.php
  #PROXY = "http://84.52.54.2:8011" # IP:PORT or HOST:PORT
  #options.add_argument('--proxy-server=%s' % PROXY)
 
@@ -51,8 +51,6 @@ def main():
  driver.get('https://www.instagram.com/%s' % account)
  sleep(2) 
  driver.find_element_by_xpath('//a[contains(@href, "%s")]' % page).click()
- #scr2 = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a')
-
 
  if page == "following":
    scr3 = driver.find_element_by_xpath('/html/body/div[1]/section/main/div/header/section/ul/li[3]/a/span' )
