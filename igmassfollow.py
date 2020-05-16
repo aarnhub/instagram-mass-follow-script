@@ -54,7 +54,7 @@ def main():
 
  if page == "following":
    scr3 = driver.find_element_by_xpath('/html/body/div[1]/section/main/div/header/section/ul/li[3]/a/span' )
-   followers = int(scr3.text)
+   followers = int(scr3.text.replace(",",""))
 
  else:
   scr3 = driver.find_elements_by_xpath('/html/body/div[1]/section/main/div/header/section/ul/li[2]/a/span' )
