@@ -12,5 +12,7 @@ Instagram Python script instruction:
 Additionally: Script with restrict and ban protection. Random phone emulation. You can connect with 4g mobile proxy.
 Required: python3, selenium, chromwebdriver.
 
+![instagram followers](https://3.bp.blogspot.com/-Os-Smx-0gBw/XsF4MrPV3cI/AAAAAAAABpA/gaUZyT88kMEUl7M8RgFXHncrTvpDbIfyACNcBGAsYHQ/s1600/followers.gif)
+
 <br>
 Contact: <a href="https://www.facebook.com/chakabiz" target="_blank">https://www.facebook.com/chakabiz/</a><br>
