@@ -16,7 +16,7 @@ import datetime
 
 def main():
  
- count = 20  # number of profiles you want to follow (not recommend more than 20 per hour or 350 per day)
+ count = 20  # number of profiles you want to get (not recommend more than 20 per hour or 350 per day)
  account = "therock"  # account from
  page = "followers"  # from following or followers
 
@@ -24,7 +24,7 @@ def main():
  yourpassword = "*******"  #your IG password
 
 
- #for proxy i recommend 4G mobile proxy: https://www.virtnumber.com/mobile-proxy-4g.php
+ #for proxy i recommend 4G mobile proxy: http://www.virtnumber.com/mobile-proxy-4g.php
  #PROXY = "http://84.52.54.2:8011" # IP:PORT or HOST:PORT
  #options.add_argument('--proxy-server=%s' % PROXY)
 
@@ -51,18 +51,20 @@ def main():
  driver.get('https://www.instagram.com/%s' % account)
  sleep(2) 
  driver.find_element_by_xpath('//a[contains(@href, "%s")]' % page).click()
+ #scr2 = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a')
+
 
  if page == "following":
    scr3 = driver.find_element_by_xpath('/html/body/div[1]/section/main/div/header/section/ul/li[3]/a/span' )
    followers = int(scr3.text.replace(",",""))
-
+   
  else:
   scr3 = driver.find_elements_by_xpath('/html/body/div[1]/section/main/div/header/section/ul/li[2]/a/span' )
   title1 = [elem.get_attribute('title') for elem in scr3]
   followers = int(title1[0].replace(",",""))
  
  sleep(2)
- print(">>>>" + page, (followers))
+ print("\033[31m" + (account) + ">>>>" + page, (followers), "\033[0m")
 
  x = datetime.datetime.now()
  print(x)
@@ -102,3 +104,4 @@ def limits():
  print ("\033[31m End \033[0m")    
 
 main()
+      
